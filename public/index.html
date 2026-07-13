@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ZERONI 融媒体站点</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand-block">
+      <h1>Zeroni’s World</h1>
+    </div>
+    <nav class="site-nav">
+      <button class="tab-trigger active" data-tab="home">首页</button>
+      <button class="tab-trigger" data-tab="ai">AI伴侣互动</button>
+      <button class="tab-trigger" data-tab="music">官方音乐室</button>
+      <button class="tab-trigger" data-tab="wish">心愿便利贴</button>
+      <button class="tab-trigger" data-tab="diary">回忆日记</button>
+      <button class="tab-trigger" data-tab="shop">购买渠道</button>
+      <button class="tab-trigger" data-tab="profile">个人中心</button>
+    </nav>
+    <button id="accountBtn" class="account-btn">登录/注册</button>
+  </header>
+
+  <main class="app-shell">
+    <section id="home" class="tab-panel active">
+      <section class="home-screen screen1 screen-hero">
+        <div class="screen-mask hero-inner">
+          <h2>Zeroni's World</h2>
+          <p>D1, Be The One！</p>
+          <button id="backToZerobase" class="hero-btn">Back to ZEROBASE</button>
+        </div>
+      </section>
+
+      <section id="home-screen-2" class="home-screen screen2 screen-merged">
+        <div class="screen-mask screen-video-content">
+          <div class="video-wrap">
+            <video id="homeScreen2Video" autoplay controls muted playsinline loop preload="auto" poster="/assets/poster1.jpg" src="/images/IMG_1616.MOV"></video>
+          </div>
+          <article class="site-intro">
+            <h3>ZERONI 站点简介</h3>
+            <p class="intro-main">Zeroni's World 是专属 ZEROBASEONE 衍生玩偶 ZERONI 的治愈陪伴网站。</p>
+            <p class="intro-sub">在这里你能和9位专属娃娃开启沉浸式 AI 情感对话，记录心愿、留存珍贵回忆、聆听治愈音源，构筑专属于你与 ZERONI 的温柔虚拟小世界。</p>
+          </article>
+        </div>
+
+        <div class="screen-mask">
+          <h3 class="screen-title">请选择你的孩子</h3>
+          <div class="doll-grid">
+          <article class="doll-card to-ai-role" data-role="ai-role-binini">
+            <img src="/images/char2.jpg" alt="BININI">
+            <h4>BININI</h4>
+            <p>沉稳队长型，擅长给你坚定又温柔的回应。</p>
+            <button class="doll-btn">开启AI对话</button>
+          </article>
+          <article class="doll-card to-ai-role" data-role="ai-role-woongnini">
+            <img src="/images/char1.jpg" alt="WOONGNINI">
+            <h4>WOONGNINI</h4>
+            <p>运动派气质，喜欢热血鼓励与轻快互动。</p>
+            <button class="doll-btn">开启AI对话</button>
+          </article>
+          <article class="doll-card to-ai-role" data-role="ai-role-hanini">
+            <img src="/images/char3.jpg" alt="HANINI">
+            <h4>HANINI</h4>
+            <p>治愈系伙伴，总能在细节里给你情绪安慰。</p>
+            <button class="doll-btn">开启AI对话</button>
+          </article>
+          <article class="doll-card to-ai-role" data-role="ai-role-thewnini">
+            <img src="/images/char4.jpg" alt="THEWNINI">
+            <h4>THEWNINI</h4>
+            <p>阳光甜酷风，擅长把日常聊成快乐现场。</p>
+            <button class="doll-btn">开启AI对话</button>
+          </article>
+          <article class="doll-card to-ai-role" data-role="ai-role-taenini">
+            <img src="/images/char5.jpg" alt="TAENINI">
+            <h4>TAENINI</h4>
+            <p>音乐细胞满分，偏爱旋律感与浪漫话题。</p>
+            <button class="doll-btn">开启AI对话</button>
+          </article>
+          <article class="doll-card to-ai-role" data-role="ai-role-rinini">
+            <img src="/images/char6.jpg" alt="RININI">
+            <h4>RININI</h4>
+            <p>贵气时尚派，表达直接又充满个人态度。</p>
+            <button class="doll-btn">开启AI对话</button>
+          </article>
+          <article class="doll-card to-ai-role" data-role="ai-role-gunini">
+            <img src="/images/char8.jpg" alt="GUNINI">
+            <h4>GUNINI</h4>
+            <p>活力小太阳，擅长把低落聊天变成开心频道。</p>
+            <button class="doll-btn">开启AI对话</button>
+          </article>
+          <article class="doll-card to-ai-role" data-role="ai-role-gunini">
+            <img src="/images/char8.jpg" alt="GUNINI">
+            <h4>GUNINI</h4>
+            <p>可靠行动派，偏好目标感强的高效交流。</p>
+            <button class="doll-btn">开启AI对话</button>
+          </article>
+          <article class="doll-card to-ai-role" data-role="ai-role-yunini">
+            <img src="/images/char9.jpg" alt="YUNINI">
+            <h4>YUNINI</h4>
+            <p>清新少年感，聊天节奏轻盈又真诚。</p>
+            <button class="doll-btn">开启AI对话</button>
+          </article>
+          </div>
+        </div>
+
+        <div class="screen-mask">
+          <h3 class="screen-title">正规购买渠道</h3>
+          <div class="purchase-grid">
+            <a class="purchase-card" href="https://linefriendssquare.com/en/collections/zerobaseone-zeroni" target="_blank" rel="noopener noreferrer">
+              <h4>LINE FRIENDS SQUARE 官网</h4>
+              <p>官方国际商城入口，查看完整 ZERONI 系列。</p>
+            </a>
+            <a class="purchase-card" href="https://m.tb.cn/h.RzZ3UWoI2NRiOSG" target="_blank" rel="noopener noreferrer">
+              <h4>LINE FRIENDS 天猫旗舰店</h4>
+              <p>淘宝官方渠道，便捷下单与活动同步更新。</p>
+            </a>
+            <a class="purchase-card" href="#小程序://LINEFRIENDSSQUARE/9qAlMShXzib4NkH">
+              <h4>LINE FRIENDS SQUARE 小程序</h4>
+              <p>复制口令跳转官方小程序，移动端体验更顺畅。</p>
+            </a>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section id="ai" class="tab-panel ai-page">
+      <div class="ai-layout">
+        <aside class="ai-panel ai-role-map" id="roleList">
+          <h3>角色列表</h3>
+          <div class="role-list">
+            <button id="ai-role-binini" class="role-item is-active" type="button"><img src="/assets/binini.png" alt="BININI"><span>BININI</span></button>
+            <button id="ai-role-woongnini" class="role-item" type="button"><img src="/assets/woongnini.png" alt="WOONGNINI"><span>WOONGNINI</span></button>
+            <button id="ai-role-hanini" class="role-item" type="button"><img src="/assets/hanini.png" alt="HANINI"><span>HANINI</span></button>
+            <button id="ai-role-thewnini" class="role-item" type="button"><img src="/assets/thewnini.png" alt="THEWNINI"><span>THEWNINI</span></button>
+            <button id="ai-role-taenini" class="role-item" type="button"><img src="/assets/taenini.png" alt="TAENINI"><span>TAENINI</span></button>
+            <button id="ai-role-rinini" class="role-item" type="button"><img src="/assets/rinini.png" alt="RININI"><span>RININI</span></button>
+            <button id="ai-role-gyunini" class="role-item" type="button"><img src="/assets/gyunini.png" alt="GYUNINI"><span>GYUNINI</span></button>
+            <button id="ai-role-gunini" class="role-item" type="button"><img src="/assets/gunnini.png" alt="GUNINI"><span>GUNINI</span></button>
+            <button id="ai-role-yunini" class="role-item" type="button"><img src="/assets/yunini.png" alt="YUNINI"><span>YUNINI</span></button>
+          </div>
+        </aside>
+
+        <section class="ai-panel chat-panel chat-box">
+          <h3>对话窗口</h3>
+          <div id="chatLog" class="chat-log"></div>
+          <div class="chat-input-row">
+            <input id="chatInput" placeholder="输入你想对角色说的话…" />
+            <button id="chatSendBtn" type="button">发送</button>
+          </div>
+        </section>
+
+        <aside class="ai-panel asset-manage">
+          <h3 id="assetTitle">素材相册</h3>
+          <div id="roleGallery" class="gallery-list">
+            <article class="gallery-card"><img src="/assets/char1.jpg" alt="素材图"></article>
+            <article class="gallery-card"><img src="/assets/char2.jpg" alt="素材图"></article>
+            <article class="gallery-card"><img src="/assets/char3.jpg" alt="素材图"></article>
+          </div>
+          <input id="roleAssetUpload" type="file" accept="image/*" style="display:none">
+          <button id="uploadRoleAssetBtn" type="button" class="upload-btn">上传素材</button>
+        </aside>
+      </div>
+    </section>
+
+    <section id="music" class="tab-panel music-page">
+      <div class="music-shell">
+        <aside class="music-library card">
+          <h3>官方音乐室</h3>
+          <div id="musicTrackList" class="music-track-list"></div>
+        </aside>
+
+        <section class="music-stage card">
+          <div id="musicModeLabel" class="music-mode-label">CD 单曲播放</div>
+          <div id="nowTitle" class="music-now-title">请选择一首歌曲</div>
+
+          <div id="cdModePanel" class="mode-panel cd-mode-panel">
+            <div class="cd-player-wrap">
+              <div id="cdDisc" class="cd-disc">
+                <img id="cdCover" src="/images/char1.JPG" alt="CD封面">
+                <span class="cd-center-dot"></span>
+              </div>
+            </div>
+            <div id="lyricsPane" class="lyrics-pane"></div>
+          </div>
+
+          <div id="mvModePanel" class="mode-panel mv-mode-panel is-hidden">
+            <video id="mvPlayer" controls playsinline preload="auto"></video>
+          </div>
+
+          <div class="music-control-bar">
+            <button id="musicPrevBtn" type="button">上一首</button>
+            <button id="musicPlayPauseBtn" type="button">播放</button>
+            <button id="musicNextBtn" type="button">下一首</button>
+            <button id="musicMvToggleBtn" type="button">切换MV</button>
+          </div>
+
+          <audio id="audioPlayer" style="display:none"></audio>
+        </section>
+      </div>
+    </section>
+
+    <section id="wish" class="tab-panel">
+      <div class="wish-page-wrap">
+        <section class="wish-hero-layer card">
+          <h2>心愿便利贴</h2>
+          <p>写下今天的小心愿，把温柔留在这面蓝白便签墙。</p>
+        </section>
+
+        <section class="wish-form-layer">
+          <div class="post-form wish-core-form">
+            <h3>发布你的便利贴</h3>
+            <input id="nick" placeholder="昵称（可选）" />
+            <textarea id="wishText" placeholder="请输入你的心愿内容"></textarea>
+            <div class="wish-form-grid">
+              <label>
+                <span>便签形状</span>
+                <select id="noteShapeSelect">
+                  <option value="square">方形便签</option>
+                  <option value="heart">爱心便签</option>
+                </select>
+              </label>
+              <label>
+                <span>便签底色</span>
+                <select id="noteToneSelect">
+                  <option value="soft-blue">浅蓝</option>
+                  <option value="white">白色</option>
+                  <option value="mist-blue">淡灰蓝</option>
+                </select>
+              </label>
+              <label>
+                <span>字体颜色</span>
+                <select id="noteFontColorSelect">
+                  <option value="deep-blue">深蓝</option>
+                  <option value="blue">蓝色</option>
+                  <option value="slate">灰蓝</option>
+                </select>
+              </label>
+            </div>
+            <button id="submitWish">贴上便利贴</button>
+            <input id="wishImage" type="file" accept="image/*" />
+          </div>
+        </section>
+
+        <section class="wish-all-layer">
+          <div class="wish-section-head">
+            <h3>我的便利贴</h3>
+          </div>
+          <div id="wishFeed" class="masonry wish-note-wall"></div>
+        </section>
+
+        <section class="wish-hot-layer">
+          <div class="wish-section-head">
+            <h3>热门心愿便利贴</h3>
+          </div>
+          <div id="hotWishes" class="wish-hot-grid"></div>
+        </section>
+
+        <div id="wishCommentModal" class="wish-comment-modal is-hidden" aria-hidden="true">
+          <div class="wish-comment-card">
+            <h4>写下评论</h4>
+            <textarea id="wishCommentInput" placeholder="输入评论内容"></textarea>
+            <div class="wish-comment-actions">
+              <button id="wishCommentCancel" type="button" class="ghost">取消</button>
+              <button id="wishCommentSubmit" type="button">提交评论</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="diary" class="tab-panel">
+      <div class="diary-layout">
+        <div class="editor-panel diary-editor-card">
+          <div class="diary-accent-bar" aria-hidden="true"></div>
+          <h3>写下你的回忆</h3>
+          <textarea id="diaryText" maxlength="500" placeholder="记录今天的故事（最多500字）…"></textarea>
+          <div class="diary-counter-wrap"><span id="diaryCharCount">0/500</span></div>
+          <div class="upload-row">
+            <div>
+              <label>上传图片</label>
+              <input id="diaryImages" type="file" multiple accept="image/*" />
+            </div>
+          </div>
+          <div class="privacy-row diary-private-tip">仅本人可见 · 私密日记</div>
+          <button id="saveDiary">保存到我的日记</button>
+        </div>
+        <div class="timeline-panel">
+          <h3>我的日记</h3>
+          <div id="diaryTimeline"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="shop" class="tab-panel">
+      <div class="shop-page">
+        <div class="shop-card">
+          <h3>购买渠道</h3>
+          <p>这里展示官方周边、角色套装与内容购买入口。</p>
+          <a class="shop-btn" href="#">立即购买</a>
+        </div>
+        <div class="shop-note">最新活动：限定联名盲盒限时上线。</div>
+      </div>
+    </section>
+
+    <section id="profile" class="tab-panel">
+      <div class="profile-page">
+        <div class="profile-card">
+          <h3>个人信息</h3>
+          <div id="userInfo"></div>
+        </div>
+        <div class="profile-card">
+          <h3>账号管理</h3>
+          <button id="logoutBtn">退出登录</button>
+          <button id="changePassBtn">修改密码</button>
+        </div>
+        <div class="profile-card profile-sections">
+          <h3>投稿记录</h3>
+          <div id="submissionList"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

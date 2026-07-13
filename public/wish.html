@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>心愿便利贴 - ZERONI</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header>
+    <h2>心愿便利贴</h2>
+    <a href="/">返回</a>
+    <button id="accountBtn" class="account-btn">登录/注册</button>
+  </header>
+  <main>
+    <div class="wish-layout">
+      <section class="post-form">
+        <h3>发布便利贴</h3>
+        <input id="nick" placeholder="昵称（可选）">
+        <textarea id="wishText" placeholder="写下你的心愿..."></textarea>
+        <div>
+          <label>上传图片</label>
+          <input type="file" id="wishImage">
+        </div>
+        <button id="submitWish">发布并投稿（需审核）</button>
+      </section>
+
+      <section class="feed">
+        <h3>瀑布流展示墙</h3>
+        <div id="wishFeed" class="masonry">加载中...</div>
+      </section>
+
+      <aside class="wish-side">
+        <h4>热门心愿贴</h4>
+        <div id="hotWishes" class="wish-side-card">加载中...</div>
+      </aside>
+    </div>
+  </main>
+  <script src="/js/main.js"></script>
+</body>
+</html>

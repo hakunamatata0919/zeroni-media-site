@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>官方音乐室 - ZERONI</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header>
+    <h2>官方音乐室</h2>
+    <a href="/">返回</a>
+    <button id="accountBtn" class="account-btn">登录/注册</button>
+  </header>
+  <main>
+    <div class="music-layout">
+      <section class="library">
+        <h3>官方音源总库</h3>
+        <div id="trackList">加载中...</div>
+      </section>
+
+      <aside class="player-col">
+        <div class="player-box">
+          <h4 id="nowTitle">未播放</h4>
+          <audio id="audioPlayer" controls></audio>
+          <label for="mvSelect">选择 MV</label>
+          <select id="mvSelect"></select>
+          <video id="mvPlayer" controls poster="/assets/poster1.jpg"></video>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <script src="/js/main.js"></script>
+</body>
+</html>

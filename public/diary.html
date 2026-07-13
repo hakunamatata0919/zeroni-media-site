@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>回忆日记 - ZERONI</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header>
+    <h2>回忆日记（占位）</h2>
+    <a href="/">返回</a>
+    <button id="accountBtn" class="account-btn">登录/注册</button>
+  </header>
+  <main>
+    <div class="diary-layout">
+      <section class="editor-panel">
+        <h3>新建日记</h3>
+        <textarea id="diaryText" placeholder="写下你的日记..." rows="8"></textarea>
+        <div class="upload-row">
+          <div>
+            <label>上传照片</label>
+            <input type="file" id="diaryImages" multiple accept="image/*">
+          </div>
+          <div>
+            <label>背景音乐</label>
+            <select id="musicSelect"></select>
+          </div>
+        </div>
+        <div class="privacy-row">
+          <label><input type="radio" name="privacy" value="public" checked> 公开日记</label>
+          <label><input type="radio" name="privacy" value="private"> 私密日记</label>
+        </div>
+        <button id="saveDiary">保存并提交审核</button>
+      </section>
+
+      <section class="timeline-panel">
+        <h3>时光轴</h3>
+        <div id="diaryTimeline">加载中...</div>
+      </section>
+    </div>
+  </main>
+  <script src="/js/main.js"></script>
+</body>
+</html>

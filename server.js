@@ -418,7 +418,7 @@ const siteConfig = {
     sub:'在这里你能和9位专属娃娃开启沉浸式 AI 情感对话，记录心愿、留存珍贵回忆、聆听治愈音源，构筑专属于你与 ZERONI 的温柔虚拟小世界。'
   },
   homeVideo:{
-    src:'/images/IMG_1616.MOV',
+    src:'/images/IMG_1616.mp4',
     poster:'/assets/poster1.jpg'
   },
   shopUrl:'https://linefriendssquare.com/en/collections/zerobaseone-zeroni',

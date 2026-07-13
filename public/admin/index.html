@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>管理员后台 - ZERONI</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body class="admin-console">
+  <header class="site-header admin-topbar">
+    <div class="brand-block">
+      <h1>ZERONI Admin</h1>
+      <p>运营管理控制台</p>
+    </div>
+    <div class="admin-top-actions">
+      <a class="account-btn" href="/">返回前端</a>
+      <button id="adminExitBtn" class="account-btn" type="button">退出管理</button>
+    </div>
+  </header>
+  <nav class="admin-nav">
+    <button data-tab="user" class="active">用户管理</button>
+    <button data-tab="audit">内容审核</button>
+    <button data-tab="wish">心愿评论管理</button>
+    <button data-tab="music">音乐与MV管理</button>
+    <button data-tab="ai">AI人设与风格</button>
+    <button data-tab="site">网站内容配置</button>
+    <button data-tab="admin">管理员账号</button>
+  </nav>
+  <main class="admin-main">
+    <section id="admin-user" class="admin-panel active">
+      <div class="admin-panel-header">
+        <input id="userSearch" placeholder="搜索用户名/昵称" />
+        <button id="userSearchBtn">查询</button>
+      </div>
+      <div id="userList" class="admin-table"></div>
+    </section>
+    <section id="admin-audit" class="admin-panel">
+      <div class="admin-panel-header">
+        <span>待审核池：心愿贴、回忆日记</span>
+      </div>
+      <div id="auditList" class="admin-table"></div>
+    </section>
+
+    <section id="admin-wish" class="admin-panel">
+      <div class="admin-panel-header">
+        <span>查看每条便利贴点赞、评论数据；可删除恶意评论</span>
+      </div>
+      <div id="wishAdminList" class="admin-table"></div>
+    </section>
+
+    <section id="admin-music" class="admin-panel">
+      <div class="admin-panel-header"><span>上传 / 新增歌曲CD素材、MV资源、编辑台词与歌单排序</span></div>
+      <form id="musicForm" class="admin-config-form">
+        <input id="musicId" placeholder="曲目ID（编辑时使用）" />
+        <input id="musicTitle" placeholder="曲目标题" />
+        <input id="musicArtist" placeholder="歌手" />
+        <input id="musicAudio" placeholder="音频路径或URL（如 /assets/xxx.mp3）" />
+        <input id="musicCover" placeholder="封面路径或URL" />
+        <input id="musicMv" placeholder="MV路径或URL" />
+        <textarea id="musicLyrics" rows="4" placeholder="滚动台词：每行一句"></textarea>
+        <select id="musicStatus">
+          <option value="active">上架</option>
+          <option value="offline">下架</option>
+        </select>
+        <div class="admin-actions">
+          <button id="musicCreateBtn" type="button">新增曲目</button>
+          <button id="musicUpdateBtn" type="button">更新曲目</button>
+          <button id="musicDeleteBtn" type="button">删除曲目</button>
+          <button id="musicReloadBtn" type="button">刷新曲库</button>
+        </div>
+      </form>
+      <div class="admin-panel-header">
+        <input id="trackOrderInput" placeholder="歌单排序ID，逗号分隔，如 3,1,2" />
+        <button id="saveTrackOrderBtn">保存排序</button>
+      </div>
+      <div id="musicTrackList" class="admin-table"></div>
+    </section>
+
+    <section id="admin-ai" class="admin-panel">
+      <div class="admin-panel-header"><span>AI角色人设、回复风格、敏感关键词过滤</span></div>
+      <form id="aiConfigForm" class="admin-config-form">
+        <label>回复风格：</label>
+        <textarea id="aiReplyStyle" rows="3"></textarea>
+        <label>角色人设(JSON对象，key为角色名)：</label>
+        <textarea id="aiPersonas" rows="6"></textarea>
+        <label>输入拦截关键词（逗号分隔）：</label>
+        <input id="aiBlockedInput" />
+        <label>输出过滤关键词（逗号分隔）：</label>
+        <input id="aiBlockedOutput" />
+        <button type="submit">保存AI配置</button>
+      </form>
+    </section>
+
+    <section id="admin-site" class="admin-panel">
+      <div class="admin-panel-header"><span>背景图、首页视频、网站介绍、导航文案、公告通知</span></div>
+      <form id="siteConfigForm" class="admin-config-form">
+        <label>公告通知：</label>
+        <textarea id="siteNotice" rows="2"></textarea>
+        <label>网站介绍标题：</label>
+        <input id="siteIntroTitle" />
+        <label>网站介绍主文案：</label>
+        <textarea id="siteIntroMain" rows="3"></textarea>
+        <label>网站介绍副文案：</label>
+        <textarea id="siteIntroSub" rows="3"></textarea>
+        <label>导航文案(JSON数组：[{"key":"home","label":"首页"}]):</label>
+        <textarea id="siteNav" rows="4"></textarea>
+        <label>首页视频地址：</label>
+        <input id="siteHomeVideoSrc" />
+        <label>首页视频封面地址：</label>
+        <input id="siteHomeVideoPoster" />
+        <label>购买渠道跳转地址：</label>
+        <input id="siteShopUrl" />
+        <label>主题背景(JSON对象：homeBackground/wishBackground/diaryBackground)：</label>
+        <textarea id="siteTheme" rows="4"></textarea>
+        <button type="submit">保存网站配置</button>
+      </form>
+    </section>
+
+    <section id="admin-admin" class="admin-panel">
+      <div class="admin-panel-header"><span>管理员账号设置</span></div>
+      <form id="adminPwdForm" class="admin-config-form">
+        <input id="adminOldPwd" type="password" placeholder="旧密码" />
+        <input id="adminNewPwd" type="password" placeholder="新密码" />
+        <button type="submit">修改管理员密码</button>
+      </form>
+    </section>
+
+    <div id="configStatus"></div>
+  </main>
+  <script src="/js/admin.js"></script>
+</body>
+</html>

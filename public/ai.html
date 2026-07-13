@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI伴侣互动 - ZERONI</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body class="ai-page">
+  <header>
+    <h2>AI伴侣互动</h2>
+    <a href="/">返回</a>
+    <button id="accountBtn" class="account-btn">登录/注册</button>
+  </header>
+  <main>
+    <div class="ai-layout">
+      <aside class="ai-panel role-panel">
+        <h3>角色列表</h3>
+        <div class="role-list" id="roleList">
+          <button class="role-item is-active" type="button" data-role="角色1">
+            <img src="/assets/char1.jpg" alt="角色1">
+            <span>角色1</span>
+          </button>
+          <button class="role-item" type="button" data-role="角色2">
+            <img src="/assets/char2.jpg" alt="角色2">
+            <span>角色2</span>
+          </button>
+          <button class="role-item" type="button" data-role="角色3">
+            <img src="/assets/char3.jpg" alt="角色3">
+            <span>角色3</span>
+          </button>
+          <button class="role-item" type="button" data-role="角色4">
+            <img src="/assets/char1.jpg" alt="角色4">
+            <span>角色4</span>
+          </button>
+          <button class="role-item" type="button" data-role="角色5">
+            <img src="/assets/char2.jpg" alt="角色5">
+            <span>角色5</span>
+          </button>
+        </div>
+      </aside>
+
+      <section class="ai-panel chat-panel">
+        <h3>文字对话</h3>
+        <div id="chatLog" class="chat-log"></div>
+        <div class="chat-input-row">
+          <input id="chatInput" placeholder="输入消息并回车..." aria-label="聊天输入框">
+          <button id="chatSendBtn" type="button">发送</button>
+        </div>
+      </section>
+
+      <aside class="ai-panel gallery-panel">
+        <h3>素材相册</h3>
+        <div class="gallery-list">
+          <article class="gallery-card">
+            <img src="/assets/char1.jpg" alt="角色1素材图">
+            <p>角色1 设定图</p>
+          </article>
+          <article class="gallery-card">
+            <img src="/assets/char2.jpg" alt="角色2素材图">
+            <p>角色2 设定图</p>
+          </article>
+          <article class="gallery-card">
+            <img src="/assets/char3.jpg" alt="角色3素材图">
+            <p>角色3 设定图</p>
+          </article>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <script src="/js/main.js"></script>
+</body>
+</html>

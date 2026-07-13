@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>管理员登录 - ZERONI</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main style="max-width: 360px; margin: 80px auto; padding: 24px; background: #fff; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+    <h2 style="margin-top:0;">管理员登录</h2>
+    <div style="display:flex; flex-direction:column; gap:12px;">
+      <input id="adminUser" placeholder="管理员账号" />
+      <input id="adminPass" type="password" placeholder="管理员密码" />
+      <button id="adminLoginBtn">登录</button>
+      <button id="backHomeBtn" type="button">返回首页</button>
+      <div id="adminLoginStatus" style="min-height: 20px; color: #c0392b;"></div>
+    </div>
+  </main>
+  <script>
+    document.getElementById('adminLoginBtn')?.addEventListener('click', async () => {
+      const username = document.getElementById('adminUser').value;
+      const password = document.getElementById('adminPass').value;
+      const status = document.getElementById('adminLoginStatus');
+      status.textContent = '登录中...';
+      const res = await fetch('/api/admin/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password })
+      });
+      const data = await res.json();
+      if (data.ok) {
+        localStorage.setItem('isAdmin', 'true');
+        window.location.href = '/admin';
+      } else {
+        status.textContent = data.message || '登录失败';
+      }
+    });
+
+    document.getElementById('backHomeBtn')?.addEventListener('click', () => {
+      window.location.href = '/';
+    });
+  </script>
+</body>
+</html>
